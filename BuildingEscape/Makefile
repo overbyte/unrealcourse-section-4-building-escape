@@ -2,7 +2,7 @@
 # *DO NOT EDIT*
 
 UNREALROOTPATH = /home/allandt/UnrealEngine
-GAMEPROJECTFILE =/home/allandt/dev/allandt/unrealcourse/section-4-escape/BuildingEscape/BuildingEscape.uproject
+GAMEPROJECTFILE =/home/allandt/dev/allandt/unrealcourse-section-4-building-escape/BuildingEscape/BuildingEscape.uproject
 
 TARGETS = \
 	BuildingEscape-Linux-Debug  \

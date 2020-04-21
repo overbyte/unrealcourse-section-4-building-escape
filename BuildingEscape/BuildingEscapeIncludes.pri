@@ -1,10 +1,31 @@
 INCLUDEPATH += \
 	/home/allandt/UnrealEngine/Engine/Source \
-	Intermediate/Build/Linux/B4D820EA/UE4Editor/Inc/BuildingEscape \
-	Source \
-	Source/BuildingEscape \
-	/home/allandt/UnrealEngine/Engine/Intermediate/Build/Linux/B4D820EA/UE4Editor/Inc/Core \
+	/home/allandt/UnrealEngine/Engine/Intermediate/Build/Linux/B4D820EA/UE4Editor/Inc/Engine \
 	/home/allandt/UnrealEngine/Engine/Source/Runtime \
+	/home/allandt/UnrealEngine/Engine/Source/Runtime/Engine/Classes \
+	/home/allandt/UnrealEngine/Engine/Source/Runtime/Engine/Public \
+	/home/allandt/UnrealEngine/Engine/Source/Runtime/Engine \
+	/home/allandt/UnrealEngine/Engine/Source/Runtime/Engine/Public/AI \
+	/home/allandt/UnrealEngine/Engine/Source/Runtime/Engine/Public/AI/Navigation \
+	/home/allandt/UnrealEngine/Engine/Source/Runtime/Engine/Public/Analytics \
+	/home/allandt/UnrealEngine/Engine/Source/Runtime/Engine/Public/Animation \
+	/home/allandt/UnrealEngine/Engine/Source/Runtime/Engine/Public/Curves \
+	/home/allandt/UnrealEngine/Engine/Source/Runtime/Engine/Public/EdGraph \
+	/home/allandt/UnrealEngine/Engine/Source/Runtime/Engine/Public/Internationalization \
+	/home/allandt/UnrealEngine/Engine/Source/Runtime/Engine/Public/Net \
+	/home/allandt/UnrealEngine/Engine/Source/Runtime/Engine/Public/Net/Util \
+	/home/allandt/UnrealEngine/Engine/Source/Runtime/Engine/Public/PacketHandlers \
+	/home/allandt/UnrealEngine/Engine/Source/Runtime/Engine/Public/Performance \
+	/home/allandt/UnrealEngine/Engine/Source/Runtime/Engine/Public/Physics \
+	/home/allandt/UnrealEngine/Engine/Source/Runtime/Engine/Public/Physics/Experimental \
+	/home/allandt/UnrealEngine/Engine/Source/Runtime/Engine/Public/Physics/ImmediatePhysics \
+	/home/allandt/UnrealEngine/Engine/Source/Runtime/Engine/Public/ProfilingDebugging \
+	/home/allandt/UnrealEngine/Engine/Source/Runtime/Engine/Public/Rendering \
+	/home/allandt/UnrealEngine/Engine/Source/Runtime/Engine/Public/Slate \
+	/home/allandt/UnrealEngine/Engine/Source/Runtime/Engine/Public/Subsystems \
+	/home/allandt/UnrealEngine/Engine/Source/Runtime/Engine/Public/Tests \
+	/home/allandt/UnrealEngine/Engine/Source/Runtime/Engine/Public/VisualLogger \
+	/home/allandt/UnrealEngine/Engine/Intermediate/Build/Linux/B4D820EA/UE4Editor/Inc/Core \
 	/home/allandt/UnrealEngine/Engine/Source/Runtime/Core/Public/Linux \
 	/home/allandt/UnrealEngine/Engine/Source/Runtime/Core/Public \
 	/home/allandt/UnrealEngine/Engine/Source/Runtime/Core \
@@ -45,30 +66,6 @@ INCLUDEPATH += \
 	/home/allandt/UnrealEngine/Engine/Source/Runtime/CoreUObject/Public/Serialization/Formatters \
 	/home/allandt/UnrealEngine/Engine/Source/Runtime/CoreUObject/Public/Templates \
 	/home/allandt/UnrealEngine/Engine/Source/Runtime/CoreUObject/Public/UObject \
-	/home/allandt/UnrealEngine/Engine/Intermediate/Build/Linux/B4D820EA/UE4Editor/Inc/Engine \
-	/home/allandt/UnrealEngine/Engine/Source/Runtime/Engine/Classes \
-	/home/allandt/UnrealEngine/Engine/Source/Runtime/Engine/Public \
-	/home/allandt/UnrealEngine/Engine/Source/Runtime/Engine \
-	/home/allandt/UnrealEngine/Engine/Source/Runtime/Engine/Public/AI \
-	/home/allandt/UnrealEngine/Engine/Source/Runtime/Engine/Public/AI/Navigation \
-	/home/allandt/UnrealEngine/Engine/Source/Runtime/Engine/Public/Analytics \
-	/home/allandt/UnrealEngine/Engine/Source/Runtime/Engine/Public/Animation \
-	/home/allandt/UnrealEngine/Engine/Source/Runtime/Engine/Public/Curves \
-	/home/allandt/UnrealEngine/Engine/Source/Runtime/Engine/Public/EdGraph \
-	/home/allandt/UnrealEngine/Engine/Source/Runtime/Engine/Public/Internationalization \
-	/home/allandt/UnrealEngine/Engine/Source/Runtime/Engine/Public/Net \
-	/home/allandt/UnrealEngine/Engine/Source/Runtime/Engine/Public/Net/Util \
-	/home/allandt/UnrealEngine/Engine/Source/Runtime/Engine/Public/PacketHandlers \
-	/home/allandt/UnrealEngine/Engine/Source/Runtime/Engine/Public/Performance \
-	/home/allandt/UnrealEngine/Engine/Source/Runtime/Engine/Public/Physics \
-	/home/allandt/UnrealEngine/Engine/Source/Runtime/Engine/Public/Physics/Experimental \
-	/home/allandt/UnrealEngine/Engine/Source/Runtime/Engine/Public/Physics/ImmediatePhysics \
-	/home/allandt/UnrealEngine/Engine/Source/Runtime/Engine/Public/ProfilingDebugging \
-	/home/allandt/UnrealEngine/Engine/Source/Runtime/Engine/Public/Rendering \
-	/home/allandt/UnrealEngine/Engine/Source/Runtime/Engine/Public/Slate \
-	/home/allandt/UnrealEngine/Engine/Source/Runtime/Engine/Public/Subsystems \
-	/home/allandt/UnrealEngine/Engine/Source/Runtime/Engine/Public/Tests \
-	/home/allandt/UnrealEngine/Engine/Source/Runtime/Engine/Public/VisualLogger \
 	/home/allandt/UnrealEngine/Engine/Intermediate/Build/Linux/B4D820EA/UE4Editor/Inc/ApplicationCore \
 	/home/allandt/UnrealEngine/Engine/Source/Runtime/ApplicationCore/Public \
 	/home/allandt/UnrealEngine/Engine/Source/Runtime/ApplicationCore \
@@ -432,6 +429,9 @@ INCLUDEPATH += \
 	/home/allandt/UnrealEngine/Engine/Source/Runtime/AudioMixer/Public/DSP \
 	/home/allandt/UnrealEngine/Engine/Source/Runtime/AudioMixer/Public/DSP/Encoders \
 	/home/allandt/UnrealEngine/Engine/Source/Runtime/AudioMixer/Public/SoundFileIO \
+	Intermediate/Build/Linux/B4D820EA/UE4Editor/Inc/BuildingEscape \
+	Source \
+	Source/BuildingEscape \
 	/home/allandt/UnrealEngine/Engine/Source/Runtime/Launch/Private \
 	/home/allandt/UnrealEngine/Engine/Source/Programs/BlankProgram/Private \
 	/home/allandt/UnrealEngine/Engine/Intermediate/Build/Linux/B4D820EA/BlankProgram/Inc/Core \

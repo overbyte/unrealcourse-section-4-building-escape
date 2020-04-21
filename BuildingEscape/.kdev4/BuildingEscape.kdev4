@@ -31,21 +31,21 @@ BuildDir=file:///home/allandt/UnrealEngine
 Title=BuildingEscape-Linux-Debug
 
 [CustomBuildSystem][BuildConfig1][ToolBuild]
-Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -project="/home/allandt/dev/allandt/unrealcourse/section-4-escape/BuildingEscape/BuildingEscape.uproject" BuildingEscape Linux Debug
+Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -project="/home/allandt/dev/allandt/unrealcourse-section-4-building-escape/BuildingEscape/BuildingEscape.uproject" BuildingEscape Linux Debug
 Enabled=true
 Environment=
 Executable=Engine/Build/BatchFiles/Linux/RunMono.sh
 Type=0
 
 [CustomBuildSystem][BuildConfig1][ToolConfigure]
-Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -makefile -kdevelopfile  -project="/home/allandt/dev/allandt/unrealcourse/section-4-escape/BuildingEscape/BuildingEscape.uproject" -game -engine  BuildingEscape Linux Debug
+Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -makefile -kdevelopfile  -project="/home/allandt/dev/allandt/unrealcourse-section-4-building-escape/BuildingEscape/BuildingEscape.uproject" -game -engine  BuildingEscape Linux Debug
 Enabled=true
 Environment=
 Executable=Engine/Build/BatchFiles/Linux/RunMono.sh
 Type=1
 
 [CustomBuildSystem][BuildConfig1][ToolClean]
-Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -project="/home/allandt/dev/allandt/unrealcourse/section-4-escape/BuildingEscape/BuildingEscape.uproject" BuildingEscape Linux Debug -clean
+Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -project="/home/allandt/dev/allandt/unrealcourse-section-4-building-escape/BuildingEscape/BuildingEscape.uproject" BuildingEscape Linux Debug -clean
 Enabled=true
 Environment=
 Executable=Engine/Build/BatchFiles/Linux/RunMono.sh
@@ -56,21 +56,21 @@ BuildDir=file:///home/allandt/UnrealEngine
 Title=BuildingEscape-Linux-DebugGame
 
 [CustomBuildSystem][BuildConfig2][ToolBuild]
-Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -project="/home/allandt/dev/allandt/unrealcourse/section-4-escape/BuildingEscape/BuildingEscape.uproject" BuildingEscape Linux DebugGame
+Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -project="/home/allandt/dev/allandt/unrealcourse-section-4-building-escape/BuildingEscape/BuildingEscape.uproject" BuildingEscape Linux DebugGame
 Enabled=true
 Environment=
 Executable=Engine/Build/BatchFiles/Linux/RunMono.sh
 Type=0
 
 [CustomBuildSystem][BuildConfig2][ToolConfigure]
-Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -makefile -kdevelopfile  -project="/home/allandt/dev/allandt/unrealcourse/section-4-escape/BuildingEscape/BuildingEscape.uproject" -game -engine  BuildingEscape Linux DebugGame
+Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -makefile -kdevelopfile  -project="/home/allandt/dev/allandt/unrealcourse-section-4-building-escape/BuildingEscape/BuildingEscape.uproject" -game -engine  BuildingEscape Linux DebugGame
 Enabled=true
 Environment=
 Executable=Engine/Build/BatchFiles/Linux/RunMono.sh
 Type=1
 
 [CustomBuildSystem][BuildConfig2][ToolClean]
-Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -project="/home/allandt/dev/allandt/unrealcourse/section-4-escape/BuildingEscape/BuildingEscape.uproject" BuildingEscape Linux DebugGame -clean
+Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -project="/home/allandt/dev/allandt/unrealcourse-section-4-building-escape/BuildingEscape/BuildingEscape.uproject" BuildingEscape Linux DebugGame -clean
 Enabled=true
 Environment=
 Executable=Engine/Build/BatchFiles/Linux/RunMono.sh
@@ -81,21 +81,21 @@ BuildDir=file:///home/allandt/UnrealEngine
 Title=BuildingEscape-Linux-Shipping
 
 [CustomBuildSystem][BuildConfig3][ToolBuild]
-Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -project="/home/allandt/dev/allandt/unrealcourse/section-4-escape/BuildingEscape/BuildingEscape.uproject" BuildingEscape Linux Shipping
+Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -project="/home/allandt/dev/allandt/unrealcourse-section-4-building-escape/BuildingEscape/BuildingEscape.uproject" BuildingEscape Linux Shipping
 Enabled=true
 Environment=
 Executable=Engine/Build/BatchFiles/Linux/RunMono.sh
 Type=0
 
 [CustomBuildSystem][BuildConfig3][ToolConfigure]
-Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -makefile -kdevelopfile  -project="/home/allandt/dev/allandt/unrealcourse/section-4-escape/BuildingEscape/BuildingEscape.uproject" -game -engine  BuildingEscape Linux Shipping
+Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -makefile -kdevelopfile  -project="/home/allandt/dev/allandt/unrealcourse-section-4-building-escape/BuildingEscape/BuildingEscape.uproject" -game -engine  BuildingEscape Linux Shipping
 Enabled=true
 Environment=
 Executable=Engine/Build/BatchFiles/Linux/RunMono.sh
 Type=1
 
 [CustomBuildSystem][BuildConfig3][ToolClean]
-Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -project="/home/allandt/dev/allandt/unrealcourse/section-4-escape/BuildingEscape/BuildingEscape.uproject" BuildingEscape Linux Shipping -clean
+Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -project="/home/allandt/dev/allandt/unrealcourse-section-4-building-escape/BuildingEscape/BuildingEscape.uproject" BuildingEscape Linux Shipping -clean
 Enabled=true
 Environment=
 Executable=Engine/Build/BatchFiles/Linux/RunMono.sh
@@ -106,21 +106,21 @@ BuildDir=file:///home/allandt/UnrealEngine
 Title=BuildingEscape-Linux-Test
 
 [CustomBuildSystem][BuildConfig4][ToolBuild]
-Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -project="/home/allandt/dev/allandt/unrealcourse/section-4-escape/BuildingEscape/BuildingEscape.uproject" BuildingEscape Linux Test
+Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -project="/home/allandt/dev/allandt/unrealcourse-section-4-building-escape/BuildingEscape/BuildingEscape.uproject" BuildingEscape Linux Test
 Enabled=true
 Environment=
 Executable=Engine/Build/BatchFiles/Linux/RunMono.sh
 Type=0
 
 [CustomBuildSystem][BuildConfig4][ToolConfigure]
-Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -makefile -kdevelopfile  -project="/home/allandt/dev/allandt/unrealcourse/section-4-escape/BuildingEscape/BuildingEscape.uproject" -game -engine  BuildingEscape Linux Test
+Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -makefile -kdevelopfile  -project="/home/allandt/dev/allandt/unrealcourse-section-4-building-escape/BuildingEscape/BuildingEscape.uproject" -game -engine  BuildingEscape Linux Test
 Enabled=true
 Environment=
 Executable=Engine/Build/BatchFiles/Linux/RunMono.sh
 Type=1
 
 [CustomBuildSystem][BuildConfig4][ToolClean]
-Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -project="/home/allandt/dev/allandt/unrealcourse/section-4-escape/BuildingEscape/BuildingEscape.uproject" BuildingEscape Linux Test -clean
+Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -project="/home/allandt/dev/allandt/unrealcourse-section-4-building-escape/BuildingEscape/BuildingEscape.uproject" BuildingEscape Linux Test -clean
 Enabled=true
 Environment=
 Executable=Engine/Build/BatchFiles/Linux/RunMono.sh
@@ -131,21 +131,21 @@ BuildDir=file:///home/allandt/UnrealEngine
 Title=BuildingEscape
 
 [CustomBuildSystem][BuildConfig5][ToolBuild]
-Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -project="/home/allandt/dev/allandt/unrealcourse/section-4-escape/BuildingEscape/BuildingEscape.uproject" BuildingEscape Linux Development
+Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -project="/home/allandt/dev/allandt/unrealcourse-section-4-building-escape/BuildingEscape/BuildingEscape.uproject" BuildingEscape Linux Development
 Enabled=true
 Environment=
 Executable=Engine/Build/BatchFiles/Linux/RunMono.sh
 Type=0
 
 [CustomBuildSystem][BuildConfig5][ToolConfigure]
-Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -makefile -kdevelopfile  -project="/home/allandt/dev/allandt/unrealcourse/section-4-escape/BuildingEscape/BuildingEscape.uproject" -game -engine  BuildingEscape Linux Development
+Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -makefile -kdevelopfile  -project="/home/allandt/dev/allandt/unrealcourse-section-4-building-escape/BuildingEscape/BuildingEscape.uproject" -game -engine  BuildingEscape Linux Development
 Enabled=true
 Environment=
 Executable=Engine/Build/BatchFiles/Linux/RunMono.sh
 Type=1
 
 [CustomBuildSystem][BuildConfig5][ToolClean]
-Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -project="/home/allandt/dev/allandt/unrealcourse/section-4-escape/BuildingEscape/BuildingEscape.uproject" BuildingEscape Linux Development -clean
+Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -project="/home/allandt/dev/allandt/unrealcourse-section-4-building-escape/BuildingEscape/BuildingEscape.uproject" BuildingEscape Linux Development -clean
 Enabled=true
 Environment=
 Executable=Engine/Build/BatchFiles/Linux/RunMono.sh
@@ -156,21 +156,21 @@ BuildDir=file:///home/allandt/UnrealEngine
 Title=BuildingEscapeEditor-Linux-Debug
 
 [CustomBuildSystem][BuildConfig6][ToolBuild]
-Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -editorrecompile -project="/home/allandt/dev/allandt/unrealcourse/section-4-escape/BuildingEscape/BuildingEscape.uproject" BuildingEscapeEditor Linux Debug
+Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -editorrecompile -project="/home/allandt/dev/allandt/unrealcourse-section-4-building-escape/BuildingEscape/BuildingEscape.uproject" BuildingEscapeEditor Linux Debug
 Enabled=true
 Environment=
 Executable=Engine/Build/BatchFiles/Linux/RunMono.sh
 Type=0
 
 [CustomBuildSystem][BuildConfig6][ToolConfigure]
-Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -makefile -kdevelopfile  -editorrecompile -project="/home/allandt/dev/allandt/unrealcourse/section-4-escape/BuildingEscape/BuildingEscape.uproject" -game -engine  BuildingEscapeEditor Linux Debug
+Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -makefile -kdevelopfile  -editorrecompile -project="/home/allandt/dev/allandt/unrealcourse-section-4-building-escape/BuildingEscape/BuildingEscape.uproject" -game -engine  BuildingEscapeEditor Linux Debug
 Enabled=true
 Environment=
 Executable=Engine/Build/BatchFiles/Linux/RunMono.sh
 Type=1
 
 [CustomBuildSystem][BuildConfig6][ToolClean]
-Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -editorrecompile -project="/home/allandt/dev/allandt/unrealcourse/section-4-escape/BuildingEscape/BuildingEscape.uproject" BuildingEscapeEditor Linux Debug -clean
+Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -editorrecompile -project="/home/allandt/dev/allandt/unrealcourse-section-4-building-escape/BuildingEscape/BuildingEscape.uproject" BuildingEscapeEditor Linux Debug -clean
 Enabled=true
 Environment=
 Executable=Engine/Build/BatchFiles/Linux/RunMono.sh
@@ -181,21 +181,21 @@ BuildDir=file:///home/allandt/UnrealEngine
 Title=BuildingEscapeEditor-Linux-DebugGame
 
 [CustomBuildSystem][BuildConfig7][ToolBuild]
-Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -editorrecompile -project="/home/allandt/dev/allandt/unrealcourse/section-4-escape/BuildingEscape/BuildingEscape.uproject" BuildingEscapeEditor Linux DebugGame
+Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -editorrecompile -project="/home/allandt/dev/allandt/unrealcourse-section-4-building-escape/BuildingEscape/BuildingEscape.uproject" BuildingEscapeEditor Linux DebugGame
 Enabled=true
 Environment=
 Executable=Engine/Build/BatchFiles/Linux/RunMono.sh
 Type=0
 
 [CustomBuildSystem][BuildConfig7][ToolConfigure]
-Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -makefile -kdevelopfile  -editorrecompile -project="/home/allandt/dev/allandt/unrealcourse/section-4-escape/BuildingEscape/BuildingEscape.uproject" -game -engine  BuildingEscapeEditor Linux DebugGame
+Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -makefile -kdevelopfile  -editorrecompile -project="/home/allandt/dev/allandt/unrealcourse-section-4-building-escape/BuildingEscape/BuildingEscape.uproject" -game -engine  BuildingEscapeEditor Linux DebugGame
 Enabled=true
 Environment=
 Executable=Engine/Build/BatchFiles/Linux/RunMono.sh
 Type=1
 
 [CustomBuildSystem][BuildConfig7][ToolClean]
-Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -editorrecompile -project="/home/allandt/dev/allandt/unrealcourse/section-4-escape/BuildingEscape/BuildingEscape.uproject" BuildingEscapeEditor Linux DebugGame -clean
+Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -editorrecompile -project="/home/allandt/dev/allandt/unrealcourse-section-4-building-escape/BuildingEscape/BuildingEscape.uproject" BuildingEscapeEditor Linux DebugGame -clean
 Enabled=true
 Environment=
 Executable=Engine/Build/BatchFiles/Linux/RunMono.sh
@@ -206,21 +206,21 @@ BuildDir=file:///home/allandt/UnrealEngine
 Title=BuildingEscapeEditor-Linux-Shipping
 
 [CustomBuildSystem][BuildConfig8][ToolBuild]
-Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -editorrecompile -project="/home/allandt/dev/allandt/unrealcourse/section-4-escape/BuildingEscape/BuildingEscape.uproject" BuildingEscapeEditor Linux Shipping
+Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -editorrecompile -project="/home/allandt/dev/allandt/unrealcourse-section-4-building-escape/BuildingEscape/BuildingEscape.uproject" BuildingEscapeEditor Linux Shipping
 Enabled=true
 Environment=
 Executable=Engine/Build/BatchFiles/Linux/RunMono.sh
 Type=0
 
 [CustomBuildSystem][BuildConfig8][ToolConfigure]
-Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -makefile -kdevelopfile  -editorrecompile -project="/home/allandt/dev/allandt/unrealcourse/section-4-escape/BuildingEscape/BuildingEscape.uproject" -game -engine  BuildingEscapeEditor Linux Shipping
+Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -makefile -kdevelopfile  -editorrecompile -project="/home/allandt/dev/allandt/unrealcourse-section-4-building-escape/BuildingEscape/BuildingEscape.uproject" -game -engine  BuildingEscapeEditor Linux Shipping
 Enabled=true
 Environment=
 Executable=Engine/Build/BatchFiles/Linux/RunMono.sh
 Type=1
 
 [CustomBuildSystem][BuildConfig8][ToolClean]
-Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -editorrecompile -project="/home/allandt/dev/allandt/unrealcourse/section-4-escape/BuildingEscape/BuildingEscape.uproject" BuildingEscapeEditor Linux Shipping -clean
+Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -editorrecompile -project="/home/allandt/dev/allandt/unrealcourse-section-4-building-escape/BuildingEscape/BuildingEscape.uproject" BuildingEscapeEditor Linux Shipping -clean
 Enabled=true
 Environment=
 Executable=Engine/Build/BatchFiles/Linux/RunMono.sh
@@ -231,21 +231,21 @@ BuildDir=file:///home/allandt/UnrealEngine
 Title=BuildingEscapeEditor-Linux-Test
 
 [CustomBuildSystem][BuildConfig9][ToolBuild]
-Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -editorrecompile -project="/home/allandt/dev/allandt/unrealcourse/section-4-escape/BuildingEscape/BuildingEscape.uproject" BuildingEscapeEditor Linux Test
+Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -editorrecompile -project="/home/allandt/dev/allandt/unrealcourse-section-4-building-escape/BuildingEscape/BuildingEscape.uproject" BuildingEscapeEditor Linux Test
 Enabled=true
 Environment=
 Executable=Engine/Build/BatchFiles/Linux/RunMono.sh
 Type=0
 
 [CustomBuildSystem][BuildConfig9][ToolConfigure]
-Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -makefile -kdevelopfile  -editorrecompile -project="/home/allandt/dev/allandt/unrealcourse/section-4-escape/BuildingEscape/BuildingEscape.uproject" -game -engine  BuildingEscapeEditor Linux Test
+Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -makefile -kdevelopfile  -editorrecompile -project="/home/allandt/dev/allandt/unrealcourse-section-4-building-escape/BuildingEscape/BuildingEscape.uproject" -game -engine  BuildingEscapeEditor Linux Test
 Enabled=true
 Environment=
 Executable=Engine/Build/BatchFiles/Linux/RunMono.sh
 Type=1
 
 [CustomBuildSystem][BuildConfig9][ToolClean]
-Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -editorrecompile -project="/home/allandt/dev/allandt/unrealcourse/section-4-escape/BuildingEscape/BuildingEscape.uproject" BuildingEscapeEditor Linux Test -clean
+Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -editorrecompile -project="/home/allandt/dev/allandt/unrealcourse-section-4-building-escape/BuildingEscape/BuildingEscape.uproject" BuildingEscapeEditor Linux Test -clean
 Enabled=true
 Environment=
 Executable=Engine/Build/BatchFiles/Linux/RunMono.sh
@@ -256,21 +256,21 @@ BuildDir=file:///home/allandt/UnrealEngine
 Title=BuildingEscapeEditor
 
 [CustomBuildSystem][BuildConfig10][ToolBuild]
-Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -editorrecompile -project="/home/allandt/dev/allandt/unrealcourse/section-4-escape/BuildingEscape/BuildingEscape.uproject" BuildingEscapeEditor Linux Development
+Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -editorrecompile -project="/home/allandt/dev/allandt/unrealcourse-section-4-building-escape/BuildingEscape/BuildingEscape.uproject" BuildingEscapeEditor Linux Development
 Enabled=true
 Environment=
 Executable=Engine/Build/BatchFiles/Linux/RunMono.sh
 Type=0
 
 [CustomBuildSystem][BuildConfig10][ToolConfigure]
-Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -makefile -kdevelopfile  -editorrecompile -project="/home/allandt/dev/allandt/unrealcourse/section-4-escape/BuildingEscape/BuildingEscape.uproject" -game -engine  BuildingEscapeEditor Linux Development
+Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -makefile -kdevelopfile  -editorrecompile -project="/home/allandt/dev/allandt/unrealcourse-section-4-building-escape/BuildingEscape/BuildingEscape.uproject" -game -engine  BuildingEscapeEditor Linux Development
 Enabled=true
 Environment=
 Executable=Engine/Build/BatchFiles/Linux/RunMono.sh
 Type=1
 
 [CustomBuildSystem][BuildConfig10][ToolClean]
-Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -editorrecompile -project="/home/allandt/dev/allandt/unrealcourse/section-4-escape/BuildingEscape/BuildingEscape.uproject" BuildingEscapeEditor Linux Development -clean
+Arguments=Engine/Binaries/DotNET/UnrealBuildTool.exe  -editorrecompile -project="/home/allandt/dev/allandt/unrealcourse-section-4-building-escape/BuildingEscape/BuildingEscape.uproject" BuildingEscapeEditor Linux Development -clean
 Enabled=true
 Environment=
 Executable=Engine/Build/BatchFiles/Linux/RunMono.sh
