@@ -3,6 +3,8 @@
 
 #include "OpenDoor.h"
 #include "GameFramework/Actor.h"
+#include "Engine/World.h"
+#include "GameFramework/PlayerController.h"
 
 // Sets default values for this component's properties
 UOpenDoor::UOpenDoor()
@@ -22,6 +24,13 @@ void UOpenDoor::BeginPlay()
 
     InitialYaw = CurrentYaw =  GetOwner()->GetActorRotation().Yaw;
     TargetYaw += InitialYaw;
+
+    if (!PressurePlate)
+    {
+        UE_LOG(LogTemp, Error, TEXT("PressurePlate should be assigned on component %s"), *GetOwner()->GetName());
+    }
+
+    ActorToOpen = GetWorld()->GetFirstPlayerController()->GetPawn();
 }
 
 
@@ -30,16 +39,20 @@ void UOpenDoor::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompon
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
+    if (PressurePlate->IsOverlappingActor(ActorToOpen))
+    {
+        OpenDoor(DeltaTime);
+    }
+
+	// ...
+}
+
+void UOpenDoor::OpenDoor(float DeltaTime)
+{
     // set the current yaw to the interpolated rotation
     CurrentYaw = FMath::FInterpTo(CurrentYaw, TargetYaw, DeltaTime, OpenSpeed);
     // worth doing this in case this has other rotation (pitch, roll) assigned to it
     FRotator DoorRotation = GetOwner()->GetActorRotation();
     DoorRotation.Yaw = CurrentYaw;
     GetOwner()->SetActorRotation(DoorRotation);
-
-    UE_LOG(LogTemp, Warning, TEXT("%s"), *GetOwner()->GetActorRotation().ToString());
-    UE_LOG(LogTemp, Warning, TEXT("target yaw %f"), GetOwner()->GetActorRotation().Yaw);
-
-	// ...
-}
-
+};
