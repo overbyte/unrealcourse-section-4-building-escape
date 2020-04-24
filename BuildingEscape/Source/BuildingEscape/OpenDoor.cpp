@@ -23,7 +23,8 @@ void UOpenDoor::BeginPlay()
 	Super::BeginPlay();
 
     InitialYaw = CurrentYaw =  GetOwner()->GetActorRotation().Yaw;
-    TargetYaw += InitialYaw;
+    OpenAngle += InitialYaw;
+    LastOpenedTime = GetWorld()->GetTimeSeconds();
 
     if (!PressurePlate)
     {
@@ -42,6 +43,12 @@ void UOpenDoor::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompon
     if (PressurePlate->IsOverlappingActor(ActorToOpen))
     {
         OpenDoor(DeltaTime);
+        LastOpenedTime = GetWorld()->GetTimeSeconds();
+        //UE_LOG(LogTemp, Warning, TEXT("last opened: %f"), LastOpenedTime);
+    }
+    else if (GetWorld()->GetTimeSeconds() > LastOpenedTime + CloseDelay)
+    {
+        CloseDoor(DeltaTime);
     }
 
 	// ...
@@ -50,7 +57,17 @@ void UOpenDoor::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompon
 void UOpenDoor::OpenDoor(float DeltaTime)
 {
     // set the current yaw to the interpolated rotation
-    CurrentYaw = FMath::FInterpTo(CurrentYaw, TargetYaw, DeltaTime, OpenSpeed);
+    CurrentYaw = FMath::Lerp(CurrentYaw, OpenAngle, DeltaTime * OpenSpeed);
+    // worth doing this in case this has other rotation (pitch, roll) assigned to it
+    FRotator DoorRotation = GetOwner()->GetActorRotation();
+    DoorRotation.Yaw = CurrentYaw;
+    GetOwner()->SetActorRotation(DoorRotation);
+};
+
+void UOpenDoor::CloseDoor(float DeltaTime)
+{
+    // set the current yaw to the interpolated rotation
+    CurrentYaw = FMath::Lerp(CurrentYaw, InitialYaw, DeltaTime * CloseSpeed);
     // worth doing this in case this has other rotation (pitch, roll) assigned to it
     FRotator DoorRotation = GetOwner()->GetActorRotation();
     DoorRotation.Yaw = CurrentYaw;
