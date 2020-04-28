@@ -87,6 +87,20 @@ void UGrabber::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompone
     }
 }
 
+FVector UGrabber::GetPlayersViewPointPos() const
+{
+    // out params
+    FVector PlayerViewPointPosition;
+    FRotator PlayerViewPointRotation;
+
+    GetWorld()->GetFirstPlayerController()->GetPlayerViewPoint(
+        OUT PlayerViewPointPosition,
+        OUT PlayerViewPointRotation
+    );
+
+    return PlayerViewPointPosition;
+}
+
 FVector UGrabber::GetPlayersReachPos() const
 {
     // out params
@@ -97,26 +111,12 @@ FVector UGrabber::GetPlayersReachPos() const
         OUT PlayerViewPointPosition,
         OUT PlayerViewPointRotation
     );
-    //UE_LOG(LogTemp, Warning, TEXT("Loc: %s, Rot: %s"), *PlayerViewPointPosition.ToString(), *PlayerViewPointRotation.ToString());
 
     return PlayerViewPointPosition + (PlayerViewPointRotation.Vector() * Reach);
 }
 
 FHitResult UGrabber::GetFirstPhysicsBodyInReach() const
 {
-    // TODO Dupliate code
-    FVector PlayerViewPointPosition;
-    FRotator PlayerViewPointRotation;
-
-    GetWorld()->GetFirstPlayerController()->GetPlayerViewPoint(
-        OUT PlayerViewPointPosition,
-        OUT PlayerViewPointRotation
-    );
-    //UE_LOG(LogTemp, Warning, TEXT("Loc: %s, Rot: %s"), *PlayerViewPointPosition.ToString(), *PlayerViewPointRotation.ToString());
-
-    FVector LookAtPosition = PlayerViewPointPosition + (PlayerViewPointRotation.Vector() * Reach);
-    // end of duplicat code
-
     // out param for raycast
     FHitResult Hit;
 
@@ -130,8 +130,8 @@ FHitResult UGrabber::GetFirstPhysicsBodyInReach() const
 
     GetWorld()->LineTraceSingleByObjectType(
         OUT Hit,
-        PlayerViewPointPosition,
-        LookAtPosition,
+        GetPlayersViewPointPos(),
+        GetPlayersReachPos(),
         FCollisionObjectQueryParams(ECollisionChannel::ECC_PhysicsBody),
         CollisionParams
     );
