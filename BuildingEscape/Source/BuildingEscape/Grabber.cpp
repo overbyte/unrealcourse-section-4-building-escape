@@ -2,6 +2,7 @@
 
 #include "Grabber.h"
 #include "CollisionQueryParams.h"
+#include "Components/PrimitiveComponent.h"
 #include "DrawDebugHelpers.h"
 #include "Engine/World.h"
 #include "GameFramework/Actor.h"
@@ -55,11 +56,33 @@ void UGrabber::SetupInputComponent()
 void UGrabber::Grab()
 {
     UE_LOG(LogTemp, Warning, TEXT("Grabber Grabbed"));
+
+    FVector LookAtPosition = GetLookAtPosition();
+
+    FHitResult HitResult = GetFirstPhysicsBodyInReach();
+
+    // if something is hit
+    if (HitResult.GetActor())
+    {
+        UPrimitiveComponent* ComponentToGrab = HitResult.GetComponent();
+
+        // attach a physics handle
+        PhysicsHandle->GrabComponentAtLocation(
+            ComponentToGrab,
+            NAME_None,
+            LookAtPosition
+        );
+    }
 }
 
 void UGrabber::Release()
 {
     UE_LOG(LogTemp, Warning, TEXT("Grabber Released"));
+
+    if (PhysicsHandle->GetGrabbedComponent())
+    {
+        PhysicsHandle->ReleaseComponent();
+    }
 }
 
 // Called every frame
@@ -67,14 +90,22 @@ void UGrabber::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompone
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
-    GetFirstPhysicsBodyInReach();
+    FVector LookAtPosition = GetLookAtPosition();
+
+    // if a physics handle is attached
+    if (PhysicsHandle->GetGrabbedComponent()) 
+    {
+        // move the object
+        PhysicsHandle->SetTargetLocation(LookAtPosition);
+    }
 }
 
-FHitResult UGrabber::GetFirstPhysicsBodyInReach() const
+FVector UGrabber::GetLookAtPosition() const
 {
     // out params
     FVector PlayerViewPointPosition;
     FRotator PlayerViewPointRotation;
+
     GetWorld()->GetFirstPlayerController()->GetPlayerViewPoint(
         OUT PlayerViewPointPosition,
         OUT PlayerViewPointRotation
@@ -82,6 +113,26 @@ FHitResult UGrabber::GetFirstPhysicsBodyInReach() const
     //UE_LOG(LogTemp, Warning, TEXT("Loc: %s, Rot: %s"), *PlayerViewPointPosition.ToString(), *PlayerViewPointRotation.ToString());
 
     FVector LookAtPosition = PlayerViewPointPosition + (PlayerViewPointRotation.Vector() * Reach);
+
+    return LookAtPosition;
+}
+
+FHitResult UGrabber::GetFirstPhysicsBodyInReach() const
+{
+    //FVector LookAtPosition = GetLookAtPosition();
+
+    // TODO Dupliate code
+    FVector PlayerViewPointPosition;
+    FRotator PlayerViewPointRotation;
+
+    GetWorld()->GetFirstPlayerController()->GetPlayerViewPoint(
+        OUT PlayerViewPointPosition,
+        OUT PlayerViewPointRotation
+    );
+    //UE_LOG(LogTemp, Warning, TEXT("Loc: %s, Rot: %s"), *PlayerViewPointPosition.ToString(), *PlayerViewPointRotation.ToString());
+
+    FVector LookAtPosition = PlayerViewPointPosition + (PlayerViewPointRotation.Vector() * Reach);
+    // end of duplicat code
 
     /*
     DrawDebugLine(
