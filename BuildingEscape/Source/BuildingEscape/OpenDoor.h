@@ -45,10 +45,14 @@ private:
     UPROPERTY(EditAnywhere)
         AActor* ActorToOpen;
 
+    UPROPERTY(EditAnywhere)
+        float MassToOpen = 60.f;
+
     float InitialYaw = 0.f;
     float CurrentYaw = 0.f;
     float LastOpenedTime = 0.f;
 
     void OpenDoor(float DeltaTime);
     void CloseDoor(float DeltaTime);
+    float GetTotalMassOfOverlappingActors() const;
 };
