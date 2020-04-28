@@ -1,8 +1,6 @@
 // Copyright Allandt Bik-Elliott 2020
 
 #include "Grabber.h"
-#include "CollisionQueryParams.h"
-#include "Components/PrimitiveComponent.h"
 #include "DrawDebugHelpers.h"
 #include "Engine/World.h"
 #include "GameFramework/Actor.h"
