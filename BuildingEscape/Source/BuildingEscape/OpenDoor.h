@@ -40,10 +40,7 @@ private:
         float CloseDelay = 2.f;
 
     UPROPERTY(EditAnywhere)
-        ATriggerVolume* PressurePlate;
-
-    UPROPERTY(EditAnywhere)
-        AActor* ActorToOpen;
+        ATriggerVolume* PressurePlate = nullptr;
 
     UPROPERTY(EditAnywhere)
         float MassToOpen = 60.f;

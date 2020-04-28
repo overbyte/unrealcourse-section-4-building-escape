@@ -33,8 +33,6 @@ void UOpenDoor::BeginPlay()
     {
         UE_LOG(LogTemp, Error, TEXT("PressurePlate should be assigned on component %s"), *GetOwner()->GetName());
     }
-
-    ActorToOpen = GetWorld()->GetFirstPlayerController()->GetPawn();
 }
 
 float UOpenDoor::GetTotalMassOfOverlappingActors() const
