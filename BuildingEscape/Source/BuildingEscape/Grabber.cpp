@@ -29,7 +29,7 @@ void UGrabber::FindPhysicsHandle()
 {
     // check for physics handle component on default pawn
     PhysicsHandle = GetOwner()->FindComponentByClass<UPhysicsHandleComponent>();
-    if (PhysicsHandle == nullptr) 
+    if (!PhysicsHandle) 
     {
         UE_LOG(LogTemp, Error, TEXT("There must be a Physics Handle Component on the Default Pawn: %s"), *GetOwner()->GetName());
     }
