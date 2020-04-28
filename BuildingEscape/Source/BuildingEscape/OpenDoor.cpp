@@ -42,6 +42,8 @@ float UOpenDoor::GetTotalMassOfOverlappingActors() const
     float TotalMass = 0.f;
 
     TArray<AActor*> OverlappingActors;
+
+    if (!PressurePlate) { return; } // make pointer safe
     PressurePlate->GetOverlappingActors(OUT OverlappingActors);
 
     for (AActor* Actor : OverlappingActors)

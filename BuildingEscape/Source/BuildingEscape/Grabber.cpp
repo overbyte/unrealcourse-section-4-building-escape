@@ -57,6 +57,7 @@ void UGrabber::Grab()
     // if something is hit
     if (ActorHit)
     {
+        if (!PhysicsHandle) { return; } // make pointer safe
 
         // attach a physics handle
         PhysicsHandle->GrabComponentAtLocation(
@@ -69,16 +70,16 @@ void UGrabber::Grab()
 
 void UGrabber::Release()
 {
-    if (PhysicsHandle->GetGrabbedComponent())
-    {
-        PhysicsHandle->ReleaseComponent();
-    }
+    if (!PhysicsHandle) { return; } // make pointer safe
+    PhysicsHandle->ReleaseComponent();
 }
 
 // Called every frame
 void UGrabber::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
+
+    if (!PhysicsHandle) { return; } // make pointer safe
 
     // if a physics handle is attached
     if (PhysicsHandle->GetGrabbedComponent()) 
