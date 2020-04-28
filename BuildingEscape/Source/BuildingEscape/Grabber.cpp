@@ -50,8 +50,6 @@ void UGrabber::SetupInputComponent()
 
 void UGrabber::Grab()
 {
-    FVector LookAtPosition = GetLookAtPosition();
-
     FHitResult HitResult = GetFirstPhysicsBodyInReach();
 
     // if something is hit
@@ -63,7 +61,7 @@ void UGrabber::Grab()
         PhysicsHandle->GrabComponentAtLocation(
             ComponentToGrab,
             NAME_None,
-            LookAtPosition
+            GetPlayersReachPos()
         );
     }
 }
@@ -81,17 +79,15 @@ void UGrabber::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompone
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
-    FVector LookAtPosition = GetLookAtPosition();
-
     // if a physics handle is attached
     if (PhysicsHandle->GetGrabbedComponent()) 
     {
         // move the object
-        PhysicsHandle->SetTargetLocation(LookAtPosition);
+        PhysicsHandle->SetTargetLocation(GetPlayersReachPos());
     }
 }
 
-FVector UGrabber::GetLookAtPosition() const
+FVector UGrabber::GetPlayersReachPos() const
 {
     // out params
     FVector PlayerViewPointPosition;
@@ -103,15 +99,11 @@ FVector UGrabber::GetLookAtPosition() const
     );
     //UE_LOG(LogTemp, Warning, TEXT("Loc: %s, Rot: %s"), *PlayerViewPointPosition.ToString(), *PlayerViewPointRotation.ToString());
 
-    FVector LookAtPosition = PlayerViewPointPosition + (PlayerViewPointRotation.Vector() * Reach);
-
-    return LookAtPosition;
+    return PlayerViewPointPosition + (PlayerViewPointRotation.Vector() * Reach);
 }
 
 FHitResult UGrabber::GetFirstPhysicsBodyInReach() const
 {
-    //FVector LookAtPosition = GetLookAtPosition();
-
     // TODO Dupliate code
     FVector PlayerViewPointPosition;
     FRotator PlayerViewPointRotation;
@@ -124,7 +116,7 @@ FHitResult UGrabber::GetFirstPhysicsBodyInReach() const
 
     FVector LookAtPosition = PlayerViewPointPosition + (PlayerViewPointRotation.Vector() * Reach);
     // end of duplicat code
-    //
+
     // out param for raycast
     FHitResult Hit;
 
@@ -143,8 +135,6 @@ FHitResult UGrabber::GetFirstPhysicsBodyInReach() const
         FCollisionObjectQueryParams(ECollisionChannel::ECC_PhysicsBody),
         CollisionParams
     );
-
-    AActor* ActorHit = Hit.GetActor();
 
     return Hit;
 }
