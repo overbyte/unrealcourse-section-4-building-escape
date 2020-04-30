@@ -25,13 +25,32 @@ void UOpenDoor::BeginPlay()
 {
 	Super::BeginPlay();
 
+    InitDoor();
+    CheckForPressurePlate();
+    FindAudioComponent();
+}
+
+void UOpenDoor::InitDoor()
+{
     InitialYaw = CurrentYaw =  GetOwner()->GetActorRotation().Yaw;
     OpenAngle += InitialYaw;
     LastOpenedTime = GetWorld()->GetTimeSeconds();
+}
 
+void UOpenDoor::CheckForPressurePlate() const
+{
     if (!PressurePlate)
     {
         UE_LOG(LogTemp, Error, TEXT("PressurePlate should be assigned on component %s"), *GetOwner()->GetName());
+    }
+}
+
+void UOpenDoor::FindAudioComponent()
+{
+    AudioComponent = GetOwner()->FindComponentByClass<UAudioComponent>();
+    if (!AudioComponent)
+    {
+        UE_LOG(LogTemp, Error, TEXT("No Audio Component found on %s"), *GetOwner()->GetName());
     }
 }
 
