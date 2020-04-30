@@ -103,4 +103,5 @@ Content/StarterContent/*
 VSCode Files
 /.vscode/*
 BuildingEscape.code-workspace
-
+# ignore downloaded content
+BuildingEscape/Content/MedievalDungeon/
